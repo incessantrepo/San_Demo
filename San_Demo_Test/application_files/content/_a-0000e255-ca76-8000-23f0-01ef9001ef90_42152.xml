@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_43634</versionUuid>
+    <versionUuid>_a-0000e2cb-d2c4-8000-23f0-01ef9001ef90_44792</versionUuid>
     <rule>
         <name>EAP_NewInterface</name>
         <uuid>_a-0000e255-ca76-8000-23f0-01ef9001ef90_42152</uuid>
@@ -15,7 +15,63 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-        <definition></definition>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Form",
+  contents: {
+    #"SYSTEM_SYSRULES_boxLayout"(
+      label: "Box",
+      contents: {},
+      style: "STANDARD",
+      marginBelow: "STANDARD"
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {}
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "NORMAL",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
         <metadataExpr></metadataExpr>
         <preferredEditor>interface</preferredEditor>
         <offlineEnabled>false</offlineEnabled>
@@ -54,5 +110,6 @@
         <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_43179"/>
         <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_43270"/>
         <historyInfo versionUuid="_a-0000e255-ca76-8000-23f0-01ef9001ef90_43634"/>
+        <historyInfo versionUuid="_a-0000e2cb-d2c4-8000-23f0-01ef9001ef90_44792"/>
     </history>
 </contentHaul>
